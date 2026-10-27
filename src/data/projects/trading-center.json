@@ -1,0 +1,19 @@
+{
+  "id": "trading-center",
+  "slug": "trading-center",
+  "title": "Trading Center",
+  "description": "A trading dashboard that shows market data, user portfolios and transaction history in one place.",
+  "image": "/projects/placeholder.svg",
+  "category": "Web App",
+  "technologies": [
+    "Next.js",
+    "Node.js",
+    "MongoDB",
+    "JWT"
+  ],
+  "github": "",
+  "liveDemo": "",
+  "featured": true,
+  "status": "completed",
+  "order": 2
+}

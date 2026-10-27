@@ -1,0 +1,20 @@
+{
+  "id": "micro-task-earning",
+  "slug": "micro-task-earning",
+  "title": "Micro-Task & Earning Platform",
+  "description": "A platform where users complete small tasks to earn rewards, with secure sign-in and an admin review flow.",
+  "image": "/projects/placeholder.svg",
+  "category": "Web App",
+  "technologies": [
+    "Next.js",
+    "Node.js",
+    "MongoDB",
+    "Firebase",
+    "Stripe"
+  ],
+  "github": "",
+  "liveDemo": "",
+  "featured": false,
+  "status": "completed",
+  "order": 4
+}

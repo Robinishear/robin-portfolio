@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: #090909;
+  color: #e7e5e4;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(163, 230, 53, 0.3);
+}
+
+@layer components {
+  /* Same dark / warm-ember look as the skills board */
+  .scene {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    overflow: hidden;
+    background: linear-gradient(135deg, #090909 0%, #11100f 58%, #241107 100%);
+  }
+  .scene .blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    background: #f97316;
+  }
+  .scene .vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(75% 75% at 50% 46%, transparent 55%, rgba(0, 0, 0, 0.35) 100%);
+  }
+
+  .glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.6);
+  }
+  .glass-hover {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .glass-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(163, 230, 53, 0.45);
+    box-shadow: 0 18px 50px -14px rgba(163, 230, 53, 0.18);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.7rem 1.4rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: linear-gradient(90deg, #a3e635, #22d3ee);
+    color: #0b0b0b;
+  }
+  .btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    color: #f5f5f4;
+  }
+  .btn-ghost:hover {
+    border-color: #22d3ee;
+    color: #a5f3fc;
+  }
+  .btn-danger {
+    border: 1px solid rgba(248, 113, 113, 0.4);
+    color: #fca5a5;
+    background: rgba(248, 113, 113, 0.08);
+  }
+  .btn-danger:hover {
+    background: rgba(248, 113, 113, 0.18);
+  }
+
+  .field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.35);
+    padding: 0.6rem 0.85rem;
+    font-size: 0.92rem;
+    color: #f5f5f4;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .field::placeholder {
+    color: #78716c;
+  }
+  .field:focus {
+    border-color: #a3e635;
+    box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.15);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #d6d3d1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+@keyframes about-text-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes about-card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.about-card-one {
+  animation: about-card-float 5s ease-in-out infinite;
+}
+
+.about-card-two {
+  animation: about-card-float 5s ease-in-out 0.5s infinite;
+}
+
+.about-card-three {
+  animation: about-card-float 5s ease-in-out 1s infinite;
+}
+
+.about-card-four {
+  animation: about-card-float 5s ease-in-out 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card-one,
+  .about-card-two,
+  .about-card-three,
+  .about-card-four {
+    animation: none;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "marigold-bill-management",
+  "slug": "marigold-bill-management",
+  "title": "Marigold Bill Management",
+  "description": "A billing system for creating invoices, tracking payments and keeping customer records organized.",
+  "image": "/projects/placeholder.svg",
+  "category": "Business",
+  "technologies": [
+    "React",
+    "Express.js",
+    "MongoDB",
+    "Stripe"
+  ],
+  "github": "",
+  "liveDemo": "",
+  "featured": true,
+  "status": "completed",
+  "order": 3
+}

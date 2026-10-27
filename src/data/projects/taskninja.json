@@ -1,0 +1,20 @@
+{
+  "id": "taskninja",
+  "slug": "taskninja",
+  "title": "TaskNinja Platform",
+  "description": "A task management platform where people create, assign and track tasks with a clean dashboard and real-time updates.",
+  "image": "/projects/placeholder.svg",
+  "category": "Web App",
+  "technologies": [
+    "React",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Socket.IO"
+  ],
+  "github": "",
+  "liveDemo": "",
+  "featured": true,
+  "status": "completed",
+  "order": 1
+}
